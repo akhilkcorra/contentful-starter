@@ -1,9 +1,5 @@
-'use client'
-
 import { ModuleRendererModuleRegistry } from '@/types/globals'
-//import ChapterNavigation from '@/ui/modules/chapter-navigation/chapter-navigation';
 import { contentfulCoreModuleRegistry } from '@/ui/utils/contentful/core-module-registry'
-//import { ComponentType } from 'react';
 
 /**
  * Map of ALL available modules (including hero modules) in the in the `ModuleRenderer`.

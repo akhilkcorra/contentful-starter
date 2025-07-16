@@ -1,5 +1,3 @@
-'use client'
-
 import { Locale } from '@/i18n/routing'
 import { DefaultChainModifiers } from '@/types/contentful/fields'
 import {

@@ -1,5 +1,3 @@
-'use client'
-
 import { ModuleRendererModuleRegistry } from '@/types/globals'
 import ItemDetails from '@/ui/modules/ItemDetails'
 import { ComponentType } from 'react'
