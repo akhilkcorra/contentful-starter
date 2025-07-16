@@ -6,6 +6,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { setRequestLocale } from 'next-intl/server'
+import { draftMode } from 'next/headers'
 
 interface LayoutProps {
     children: React.ReactNode
@@ -27,6 +28,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
     if (!hasLocale(routing.locales, locale)) {
         notFound()
     }
+    const { isEnabled } = await draftMode()
 
     // Enable static rendering
     setRequestLocale(locale)
@@ -36,6 +38,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} text-base leading-[1.625rem] font-normal  min-h-dvh flex flex-col overflow-x-hidden antialiased`}
             >
+                {isEnabled && 'IS Draft enabled'}
                 <NextIntlClientProvider>
                     <Header />
                     {children}
