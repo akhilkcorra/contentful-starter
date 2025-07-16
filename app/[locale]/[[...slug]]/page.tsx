@@ -91,6 +91,8 @@ export const generateStaticParams = async (): Promise<PageParams[]> => {
     }
 }
 
+export const revalidate = 14400
+
 /**
  * Display a page based on locale and slug.
  */
