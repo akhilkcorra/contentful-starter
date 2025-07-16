@@ -1,0 +1,17 @@
+{
+    "title": "fr - Hello world!",
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, fr {🇫🇷 French} en {🇺🇸 English} other {Unknown}}"
+    },
+    "HomePage": {
+        "title": "fr - Hello world",
+        "about": "fr - Go to the about page"
+    },
+    "Footer": {
+        "aboutUs": "À propos de nous",
+        "services": "Services",
+        "contact": "Contact",
+        "home": "Accueil"
+    }
+}

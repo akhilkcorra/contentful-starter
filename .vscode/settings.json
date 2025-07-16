@@ -1,0 +1,24 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "stylelint.validate": ["css", "less", "postcss", "scss"],
+    "prettier.documentSelectors": ["**/*.svg"],
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "i18n-ally.localesPaths": ["i18n", "i18n/locales"]
+}
