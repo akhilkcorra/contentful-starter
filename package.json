@@ -7,7 +7,7 @@
         "build": "yarn codegen:contentful && next build",
         "start": "next start",
         "lint": "next lint",
-        "cf:skeleton": "source .env; cf-content-types-generator -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_CONTENT_MANAGEMENT_TOKEN -e $CONTENTFUL_ENVIRONMENT --out=./types/contentful/generated/skeletons --v10 --typeguard --jsdoc",
+        "cf:skeleton": "dotenv -- sh -c 'cf-content-types-generator -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_CONTENT_MANAGEMENT_TOKEN -e $CONTENTFUL_ENVIRONMENT --out=./types/contentful/generated/skeletons --v10 --typeguard --jsdoc'",
         "cf:rename": "node-rename --pattern \"./types/contentful/generated/skeletons/*.ts\" --type kebab",
         "cf:rename:cleanup": "rm ./types/contentful/generated/skeletons/index.ts",
         "codegen:contentful": "yarn cf:skeleton",
@@ -21,6 +21,7 @@
         "algoliasearch": "5.20.0",
         "clsx": "^2.1.1",
         "contentful-management": "^11.42.0",
+        "dotenv-cli": "^8.0.0",
         "lint-staged": "^15.4.3",
         "next": "15.1.4",
         "next-intl": "^4.0.2",
@@ -51,12 +52,5 @@
             "prettier --write"
         ]
     },
-    "license": "UNLICENSED",
-    "config": {
-        "commit-message-validator": {
-            "_comment": "Validate that all commits contain ticket number.",
-            "pattern": "[^a-z]+-[0-9]+:.+",
-            "errorMessage": "Commit message MUST begin with a ticket number, following this format: `XYZ-12: Your message here`"
-        }
-    }
+    "license": "UNLICENSED"
 }
