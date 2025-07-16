@@ -1,7 +1,7 @@
 import { defineRouting, LocalePrefix } from 'next-intl/routing'
 
 export const localePrefix = {
-    mode: 'as-needed'
+    mode: 'always'
 }
 
 export const localeOptions = {
