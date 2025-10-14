@@ -1,5 +1,6 @@
 import { getPageBySlug, getPageList } from '@/lib/contentful/models/page'
 import { notFound } from 'next/navigation'
+import { draftMode } from 'next/headers'
 import { ModuleRenderer } from '@/ui/utils/contentful'
 import { contentfulModuleRegistry } from '@/ui/utils/contentful/module-registry'
 import { Metadata } from 'next'
@@ -99,6 +100,8 @@ export const revalidate = 14400
 // @ts-expect-error: TBD
 const Page = async ({ params }: PageProps) => {
     const { slug = [homeSlug], locale } = (await params) || {}
+    const {isEnabled} = await draftMode()
+    console.log({isDraftEnabled: isEnabled})
     const page = await getPageBySlug(slug.join('/'), {
         locale
     })
