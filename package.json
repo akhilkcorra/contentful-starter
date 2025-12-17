@@ -1,56 +1,56 @@
 {
-    "name": "atkins",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev -p 3000",
-        "build": "yarn codegen:contentful && next build",
-        "start": "next start",
-        "lint": "next lint",
-        "cf:skeleton": "dotenv -- sh -c 'cf-content-types-generator -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_CONTENT_MANAGEMENT_TOKEN -e $CONTENTFUL_ENVIRONMENT --out=./types/contentful/generated/skeletons --v10 --typeguard --jsdoc'",
-        "cf:rename": "node-rename --pattern \"./types/contentful/generated/skeletons/*.ts\" --type kebab",
-        "cf:rename:cleanup": "rm ./types/contentful/generated/skeletons/index.ts",
-        "codegen:contentful": "yarn cf:skeleton",
-        "prepare": "husky",
-        "lint-staged": "lint-staged"
-    },
-    "dependencies": {
-        "@contentful/rich-text-types": "^17.0.0",
-        "@netlify/functions": "^3.0.0",
-        "@types/safe-json-stringify": "^1.1.5",
-        "algoliasearch": "5.20.0",
-        "clsx": "^2.1.1",
-        "contentful-management": "^11.42.0",
-        "dotenv-cli": "^8.0.0",
-        "lint-staged": "^15.4.3",
-        "next": "15.1.9",
-        "next-intl": "^4.0.2",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "safe-json-stringify": "^1.2.0"
-    },
-    "devDependencies": {
-        "@eslint/eslintrc": "^3",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "cf-content-types-generator": "2.12.2",
-        "commit-message-validator": "^1.0.2",
-        "contentful-typescript-codegen": "^3.4.0",
-        "dotenv": "^16.4.7",
-        "eslint": "^9",
-        "eslint-config-next": "15.1.9",
-        "husky": "^9.1.7",
-        "postcss": "^8",
-        "prettier": "^3.4.2",
-        "tailwindcss": "^3.4.1",
-        "typescript": "^5"
-    },
-    "lint-staged": {
-        "*.{js,ts,jsx,tsx}": [
-            "eslint --fix",
-            "prettier --write"
-        ]
-    },
-    "license": "UNLICENSED"
+  "name": "atkins",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "yarn codegen:contentful && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cf:skeleton": "dotenv -- sh -c 'cf-content-types-generator -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_CONTENT_MANAGEMENT_TOKEN -e $CONTENTFUL_ENVIRONMENT --out=./types/contentful/generated/skeletons --v10 --typeguard --jsdoc'",
+    "cf:rename": "node-rename --pattern \"./types/contentful/generated/skeletons/*.ts\" --type kebab",
+    "cf:rename:cleanup": "rm ./types/contentful/generated/skeletons/index.ts",
+    "codegen:contentful": "yarn cf:skeleton",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "@contentful/rich-text-types": "^17.0.0",
+    "@netlify/functions": "^3.0.0",
+    "@types/safe-json-stringify": "^1.1.5",
+    "algoliasearch": "5.20.0",
+    "clsx": "^2.1.1",
+    "contentful-management": "^11.42.0",
+    "dotenv-cli": "^8.0.0",
+    "lint-staged": "^15.4.3",
+    "next": "15.1.11",
+    "next-intl": "^4.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "safe-json-stringify": "^1.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cf-content-types-generator": "2.12.2",
+    "commit-message-validator": "^1.0.2",
+    "contentful-typescript-codegen": "^3.4.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.9",
+    "husky": "^9.1.7",
+    "postcss": "^8",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "license": "UNLICENSED"
 }
